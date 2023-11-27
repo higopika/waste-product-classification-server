@@ -1,0 +1,24 @@
+stages:
+    prepare:
+        cmd: python3 src/prepare.py
+        deps: 
+        - src/prepare.py
+        - data/data.zip
+        outs:
+        - data/dataset.yaml
+    train:
+        cmd: python3 src/train.py
+        deps:
+        - src/train.py
+        - data/dataset.yaml
+        outs:
+        - model/weights/best.pt
+            
+    export:
+        cmd: python3 src/export.py --weights model/weights/best.pt --include onnx
+        deps:
+        - src/export.py
+        - model/weights/best.pt
+        outs:
+        - model/weights/best.onnx
+            
