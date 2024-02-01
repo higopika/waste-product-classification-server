@@ -41,3 +41,30 @@ Prepare.py file will split the data in the data.zip file into test and train
 
 2. Collected images and compressed images are present in this link - https://drive.google.com/drive/folders/1DKgp7wyM6SoV-sTBTUAjZkEsC_Nzt4I_?usp=drive_link
 3. The rename_file.py file is a utility program that was used in data preparation.
+
+ERRORS FACED
+1. Git user name and email must be configured:
+     Use the command git config --global user.email "xyx@gmail.com", git config --global user.name "xyz".
+   https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/How-set-git-config-username-and-email-fields-in-global-and-local-configuration-files
+   
+2. ERROR: failed to reproduce 'prepare': failed to run: python3 src/prepare.py, exited with 1:
+     changes were made in in line 21;
+
+   def copy_files(
+        src_directory: str, 
+        dest_directory: str,
+        files: list[str],
+        train: bool = True,)
+   
+   changed to:
+   
+   def copy_files(
+        src_directory: str, 
+        dest_directory: str,
+        files: list,
+        train: bool = True,)
+   
+   
+  
+
+
