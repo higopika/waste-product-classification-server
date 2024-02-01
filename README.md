@@ -5,8 +5,9 @@
 3. Install the requirements'txt file - pip install -r requirements.txt
 4. Download the dataset data.zip (https://drive.google.com/drive/folders/1DKgp7wyM6SoV-sTBTUAjZkEsC_Nzt4I_?usp=drive_link
 ) and store it in data folder (create a folder with the name "data")
-5. Type the command - dvc dag - to see the stages of the project
-6. To run the experiment - dvc exp run
+6. Initialize dvc using the command - dvc init
+7. Type the command - dvc dag - to see the stages of the project
+8. To run the experiment - dvc exp run
 
 
 REFERENCES
